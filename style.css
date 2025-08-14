@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    /* full viewport height */
+}
+
+#left {
+    width: 400px;
+    /* thinner column */
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #6371ad;
+    color: yellow;
+}
+
+#right {
+    flex: 1;
+    /* takes up remaining space */
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: center;
+}
+
+#mainImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Main menus */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 25px;
+}
+
+.menu>li {
+    position: relative;
+    padding: 8px 12px;
+    background: #ddd;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.menu>li:hover {
+    background: #ccc;
+}
+
+/* Submenu */
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: none;
+    background: #eee;
+}
+
+.submenu li {
+    padding: 6px 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.submenu li:hover {
+    background: #ddd;
+}
+
+/* Show submenu on hover */
+.menu>li:hover .submenu {
+    display: block;
+}
+
+
+/* subsubmenu */
+.subsubmenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: none;
+    background: #eee;
+    min-width: 150px;
+}
+
+.subsubmenu li {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.subsubmenu li:hover {
+    background: #dddddd;
+}
+
+/* Show subsubmenu on hover */
+.submenu>li:hover .subsubmenu {
+    display: block;
+}
