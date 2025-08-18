@@ -18,6 +18,24 @@ body {
     box-sizing: border-box;
 }
 
+#otherRx {
+    width: 100%;
+    background-color:lightsteelblue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#aromatics {
+    width: 100%;
+    background-color:lightgreen;
+    padding: 0px 20px 20px 0;
+    box-sizing: border-box;
+}
+
+button{
+    font-size: 20px;
+}
+
 button:hover {
     background: #6371ad;
     color: yellow;
@@ -42,7 +60,7 @@ button:hover {
 .menu {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
     font-size: 25px;
 }
 
