@@ -14,35 +14,43 @@
     <body>
         <div id="container">
             <div id="left">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">
-                                <h1>Chemistry</h1>
-                            </a></li>
-                    </ul>
-                </nav>
-
-
                 <div class="pdf-buttons">
-                    <button class="pdf-btn" data-pdf="files/graphs and transformations.pdf">Main Graphs</button>
-                    <button class="pdf-btn" data-pdf="files/unit circle.pdf">Unit Circle</button>
-                    <button class="pdf-btn" data-pdf="files/identities, derivatives, integrals.pdf">
+                    <button class="pdf-btn" data-pdf="math/graphs and transformations.pdf">Main Graphs</button>
+                    <button class="pdf-btn" data-pdf="math/unit circle.pdf">Unit Circle</button>
+                    <button class="pdf-btn" data-pdf="math/identities, derivatives, integrals.pdf">
                         Identities | Derivatives | Integrals
                     </button>
-                    <button class="pdf-btn" data-pdf="files/integrals applications.pdf">Integrals Applications</button>
+                    <button class="pdf-btn" data-pdf="math/integrals applications.pdf">Integrals Applications</button>
 
                     <!-- Group the last two in a special container -->
                     <div class="pdf-group">
-                        <button class="pdf-btn" data-pdf="files/discrete distributions.pdf">Discrete
+                        <button class="pdf-btn" data-pdf="math/discrete distributions.pdf">Discrete
                             Distributions</button>
-                        <button class="pdf-btn" data-pdf="files/continuous distributions.pdf">Continuous
+                        <button class="pdf-btn" data-pdf="math/continuous distributions.pdf">Continuous
                             Distributions</button>
                     </div>
-                </div>                
+
+                    <div>
+                        <button class="pdf-btn" data-pdf="math/seriesTests.pdf">Series Tests</button>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">
+                            <h1>Home</h1>
+                        <li><a href="orgChem.html">
+                                <h1>Organic Chemistry</h1>
+                            </a></li>
+                        <li><a href="inorgChem.html">
+                                <h1>Inorganic Chemistry</h1>
+                            </a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div id="right">
-                <div id="pdf-viewer" class="pdf-viewer"></div>
+                <div id="viewerMath" class="pdf-viewer"></div>
             </div>
         </div>
 

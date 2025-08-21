@@ -3,6 +3,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#mainMenu {
+    border: 50px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
 #container {
     display: flex;
     height: 100vh;
@@ -18,17 +26,10 @@ body {
     box-sizing: border-box;
 }
 
-#otherRx {
+#genRx, #otherRx, #aromatics {
     width: 100%;
-    background-color: lightsteelblue;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#aromatics {
-    width: 100%;
-    background-color: lightgreen;
-    padding: 0px 20px 20px 0;
+    background-color: #ddd;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -41,28 +42,6 @@ button:hover {
     color: yellow;
 }
 
-/* THIS IS THE CODE FOR THE NAV*/
-nav {
-    margin:0 0 0 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0 0 0 10px;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li a {
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* HERE ENDS THE CODE FOR THE NAV*/
-
 #right {
     flex: 1;
     /* takes up remaining space */
@@ -73,20 +52,21 @@ nav ul li a:hover {
     vertical-align: center;
 }
 
-#mainImage {
+#viewerOrgChem, #viewerInorgChem, #viewerMath {
     max-width: 100%;
     max-height: 100%;
 }
 
 /* Main menus */
-.menu {
+.menu, .menuInorgChem {
     list-style: none;
     padding: 0;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
     font-size: 25px;
+    background-color: #ddd;;
 }
 
-.menu>li {
+.menu>li, .menuInorgChem>li {
     position: relative;
     padding: 8px 12px;
     background: #ddd;
@@ -94,12 +74,12 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.menu>li:hover {
+.menu>li:hover, .submenu li:hover, .subsubmenu li:hover, .menuInorgChem>li:hover, .submenuInorgChem li:hover {
     background: #ccc;
 }
 
 /* Submenu */
-.submenu {
+.submenu, .submenuInorgChem {
     position: absolute;
     top: 0;
     left: 100%;
@@ -110,18 +90,15 @@ nav ul li a:hover {
     background: #eee;
 }
 
-.submenu li {
+.submenu li, .submenuInorgChem li {
     padding: 6px 10px;
     cursor: pointer;
     position: relative;
 }
 
-.submenu li:hover {
-    background: #ddd;
-}
 
-/* Show submenu on hover */
-.menu>li:hover .submenu {
+/* Show submenu and subsubmenu on hover */
+.menu>li:hover .submenu, .submenu>li:hover .subsubmenu, .menuInorgChem>li:hover .submenuInorgChem {
     display: block;
 }
 
@@ -144,14 +121,37 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.subsubmenu li:hover {
-    background: #dddddd;
+
+/* THIS IS THE CODE FOR THE NAV*/
+nav {
+    margin: 200px 0 0 10px;
 }
 
-/* Show subsubmenu on hover */
-.submenu>li:hover .subsubmenu {
-    display: block;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;       /* put items side by side */
+    gap: 8px;            /* space between them */
 }
+
+nav ul li a {
+    display: inline-block;
+    padding: 2px 8px;        /* reduce inner spacing */
+    line-height: 1;          /* tighter height */
+    font-size: 10px;         /* smaller text */
+    background-color: #007BFF;
+    color: white;
+    border-radius: 2px;      /* less rounded = less “big” */
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
 
 
 /* THIS IS THE STYLE OF buttons IN math.html */
@@ -172,8 +172,9 @@ nav ul li a:hover {
   border: none;
   border-radius: 6px;
   font-weight: bold;
+  font-size: 18px;
   text-align: left;
-  width: 100%;
+  width: 350px
 }
 
 .pdf-btn:hover {
@@ -188,5 +189,6 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 360px;
 }
 /* HERE ENDS THE STYLE OF math.html */
