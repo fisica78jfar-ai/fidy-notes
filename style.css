@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,41 +17,31 @@ body {
 
 #container {
     display: flex;
-    height: 100vh;
-    /* full viewport height */
+    height: 100vh;    /* full viewport height */
 }
 
 #left {
-    width: 400px;
-    /* thinner column */
+    width: 400px;    /* thinner column */
     background-color: #f0f0f0;
     text-align: center;
     padding: 2px;
-    box-sizing: border-box;
 }
 
-#genRx, #otherRx, #aromatics, #spectrometry {
+/* show the menu when hovering the section (h2 or ul both inside) */
+#left > div:hover > .menu {
+    display: block;
+}
+
+#genRx, #otherRx, #aromatics, #spectrometry, #diagrams, #examples {
     width: 100%;
     background-color: #ddd;
     padding: 10px;
-    box-sizing: border-box;
-}
-
-button {
-    font-size: 20px;
-}
-
-button:hover {
-    background: #6371ad;
-    color: yellow;
 }
 
 #right {
-    flex: 1;
-    /* takes up remaining space */
+    flex: 1;    /* takes up remaining space */
     background-color: #ffffff;
     padding: 20px;
-    box-sizing: border-box;
     text-align: center;
 }
 
@@ -71,6 +65,7 @@ button:hover {
     margin: 10px 0;  /* instead of 10px 0 10px 0 */
     font-size: 25px;
     background-color: #ddd;
+    display: none; 
 }
 
 .menu>li {
@@ -99,9 +94,7 @@ button:hover {
     font-size: 22px;
 }
 
-
-
-.submenu li {
+.submenu li, .subsubmenu li {
     padding: 6px 10px;
     cursor: pointer;
     position: relative;
@@ -111,11 +104,6 @@ button:hover {
 /* Show submenu and subsubmenu on hover */
 .menu>li:hover .submenu, .submenu>li:hover .subsubmenu {
     display: block;
-}
-
-.subsubmenu li {
-    padding: 6px 10px;
-    cursor: pointer;
 }
 
 
@@ -128,24 +116,18 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    /* put items side by side */
-    gap: 8px;
-    /* space between them */
+    display: flex;    /* put items side by side */
+    gap: 8px;    /* space between them */
 }
 
 nav ul li a {
     display: inline-block;
-    padding: 2px 8px;
-    /* reduce inner spacing */
-    line-height: 1;
-    /* tighter height */
-    font-size: 10px;
-    /* smaller text */
+    padding: 2px 8px;    /* reduce inner spacing */
+    line-height: 1;    /* tighter height */
+    font-size: 10px;    /* smaller text */
     background-color: #007BFF;
     color: white;
-    border-radius: 2px;
-    /* less rounded = less “big” */
+    border-radius: 2px;    /* less rounded = less “big” */
     text-decoration: none;
     transition: background 0.3s;
 }

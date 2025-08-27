@@ -17,10 +17,10 @@ function setupImageSwitch(selector, viewerId) {
 
 // Organic Chem
 setupImageSwitch(".subsubmenu li", "viewerOrgChem");
-setupImageSwitch("button", "viewerOrgChem");
+setupImageSwitch(".oneElement", "viewerOrgChem");
 
 // Inorganic Chem
-setupImageSwitch(".subsubmenu li", "viewerInorgChem");
+setupImageSwitch(".oneElement", "viewerInorgChem");
 
 
 // -------------------- PDF VIEWER (Math page) --------------------
