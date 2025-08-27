@@ -1,45 +1,42 @@
-// HERE GOES THE CODE FOR ORGANIC CHEMISTRY
-// for the options from the menu
-const listItems = document.querySelectorAll('.subsubmenu li');
-const changedImage = document.getElementById('viewerOrgChem'); // changed to match the id in orgChem.html
+// -------------------- IMAGE SWITCHING (Organic + Inorganic) --------------------
+// Handles clicks from menus or buttons and updates the viewer
+function setupImageSwitch(selector, viewerId) {
+  const items = document.querySelectorAll(selector);
+  const viewer = document.getElementById(viewerId);
 
-listItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const imgSrc = item.getAttribute('data-img'); // get the data-img attribute value
-    changedImage.src = imgSrc; // set the src of the image to that value
-    changedImage.alt = "Reaction";
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      const imgSrc = item.getAttribute("data-img");
+      if (imgSrc) {
+        viewer.src = imgSrc;
+        viewer.alt = "Reaction";
+      }
+    });
   });
-});
+}
 
-// for the buttons 
-const listButtons = document.querySelectorAll('button');
-const changedImage2 = document.getElementById('viewerOrgChem');
+// Organic Chem
+setupImageSwitch(".subsubmenu li", "viewerOrgChem");
+setupImageSwitch("button", "viewerOrgChem");
 
-listButtons.forEach(item => {
-  item.addEventListener('click', () => {
-    const imgSrc2 = item.getAttribute('data-img'); // get the data-img attribute value
-    changedImage2.src = imgSrc2; // set the src of the image to that value
-  });
-});
+// Inorganic Chem
+setupImageSwitch(".subsubmenu li", "viewerInorgChem");
 
 
-// HERE GOES THE CODE FOR math.html
-// code for buttons to show pdf
+// -------------------- PDF VIEWER (Math page) --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const pdfButtons = document.querySelectorAll(".pdf-btn");
   const pdfViewer = document.getElementById("viewerMath");
-  let currentPdf = null; // track which PDF is showing
+  let currentPdf = null;
 
   pdfButtons.forEach(button => {
     button.addEventListener("click", () => {
       const pdfFile = button.getAttribute("data-pdf");
 
       if (currentPdf === pdfFile) {
-        // If same button clicked again → clear viewer
-        pdfViewer.innerHTML = "";
+        pdfViewer.innerHTML = "";  // clear viewer
         currentPdf = null;
       } else {
-        // Otherwise → load the new PDF
         pdfViewer.innerHTML = `<iframe src="${pdfFile}" width="100%" height="800px" style="border:none;"></iframe>`;
         currentPdf = pdfFile;
       }
@@ -48,15 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// HERE GOES THE CODE FOR INORGANIC CHEMISTRY
-// for the options from the menu
-const listItemsInorgChem = document.querySelectorAll('.submenuInorgChem li');
-const changedImageInorgChem = document.getElementById('viewerInorgChem'); // changed to match the id in orgChem.html
+// -------------------- IMAGE ZOOM (all viewers) --------------------
+document.querySelectorAll(".viewer").forEach(img => {
+  img.addEventListener("click", (e) => {
+    if (!img.src) return;
 
-listItemsInorgChem.forEach(item => {
-  item.addEventListener('click', () => {
-    const imgSrcInorChem = item.getAttribute('data-img'); // get the data-img attribute value
-    changedImageInorgChem.src = imgSrcInorChem; // set the src of the image to that value
-    changedImageInorgChem.alt = "Reaction";
+    img.classList.toggle("enlarged");
+
+    if (img.classList.contains("enlarged")) {
+      const rect = img.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+    } else {
+      img.style.transformOrigin = "center center";
+    }
   });
 });

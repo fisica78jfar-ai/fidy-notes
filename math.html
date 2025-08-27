@@ -9,51 +9,51 @@
     <script src="script.js" defer></script>
 </head>
 
+
+
 <body>
+    <div id="container">
+        <div id="left">
+            <div class="pdf-buttons">
+                <button class="pdf-btn" data-pdf="math/graphs and transformations.pdf">Main Graphs</button>
+                <button class="pdf-btn" data-pdf="math/unit circle.pdf">Unit Circle</button>
+                <button class="pdf-btn" data-pdf="math/identities, derivatives, integrals.pdf">
+                    Identities | Derivatives | Integrals
+                </button>
+                <button class="pdf-btn" data-pdf="math/integrals applications.pdf">Integrals Applications</button>
 
-    <body>
-        <div id="container">
-            <div id="left">
-                <div class="pdf-buttons">
-                    <button class="pdf-btn" data-pdf="math/graphs and transformations.pdf">Main Graphs</button>
-                    <button class="pdf-btn" data-pdf="math/unit circle.pdf">Unit Circle</button>
-                    <button class="pdf-btn" data-pdf="math/identities, derivatives, integrals.pdf">
-                        Identities | Derivatives | Integrals
-                    </button>
-                    <button class="pdf-btn" data-pdf="math/integrals applications.pdf">Integrals Applications</button>
-
-                    <!-- Group the last two in a special container -->
-                    <div class="pdf-group">
-                        <button class="pdf-btn" data-pdf="math/discrete distributions.pdf">Discrete
-                            Distributions</button>
-                        <button class="pdf-btn" data-pdf="math/continuous distributions.pdf">Continuous
-                            Distributions</button>
-                    </div>
-
-                    <div>
-                        <button class="pdf-btn" data-pdf="math/seriesTests.pdf">Series Tests</button>
-                    </div>
+                <!-- Group the last two in a special container -->
+                <div class="pdf-group">
+                    <button class="pdf-btn" data-pdf="math/discrete distributions.pdf">Discrete
+                        Distributions</button>
+                    <button class="pdf-btn" data-pdf="math/continuous distributions.pdf">Continuous
+                        Distributions</button>
                 </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">
-                            <h1>Home</h1>
-                        <li><a href="orgChem.html">
-                                <h1>Organic Chemistry</h1>
-                            </a></li>
-                        <li><a href="inorgChem.html">
-                                <h1>Inorganic Chemistry</h1>
-                            </a></li>
-                    </ul>
-                </nav>
+                <div>
+                    <button class="pdf-btn" data-pdf="math/seriesTests.pdf">Series Tests</button>
+                </div>
             </div>
 
-            <div id="right">
-                <div id="viewerMath" class="pdf-viewer"></div>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">
+                            <h1>Home</h1>
+                    <li><a href="orgChem.html">
+                            <h1>Organic Chemistry</h1>
+                        </a></li>
+                    <li><a href="inorgChem.html">
+                            <h1>Inorganic Chemistry</h1>
+                        </a></li>
+                </ul>
+            </nav>
         </div>
 
-    </body>
+        <div id="right">
+            <div id="viewerMath" class="pdf-viewer"></div>
+        </div>
+    </div>
+
+</body>
 
 </html>
