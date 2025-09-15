@@ -2,29 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chem Org Rx</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FidyNotes</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div id="mainMenu">
-    <h1>Welcome to FidyNotes</h1>
-    
-    <nav>
-        <ul>
-            <li><a href="orgChem.html">
-                    <h1>Organic Chemistry</h1>
-            <li><a href="math.html">
-                    <h1>Math</h1>
-                </a></li>
-            <li><a href="inorgChem.html">
-                    <h1>Inorganic Chemistry</h1>
-                </a></li>
+
+    <header>Welcome to FidyNotes</header>
+
+    <nav id="nav" class="nav">
+        <ul class="subjects">
+
+            <!-- ORGANIC CHEMISTRY -->
+            <li>Organic Chemistry
+                <ul class="dropdown">
+                    <li class="img-resource" data-img="orgChem/Reactions Map.png">Reactions Map</li>
+
+                    <li>Reactants
+                        <ul class="dropdown">
+                            <li>Alkane</li>
+                            <li>Alkene
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/Alkenes-H2.png">H<small>2</small></li>
+                                    <li data-img="orgChem/Alkenes-HX.png">H-X</li>
+                                    <li data-img="orgChem/Alkenes-X2.png">X<small>2</small></li>
+                                    <li data-img="orgChem/Alkenes-X2-H2O.png">X<small>2</small>/H<small>2</small>O</li>
+                                    <li data-img="orgChem/Alkenes-H2O.png">H<small>2</small>O</li>
+                                </ul>
+                            </li>
+                            <li>Alkyne
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/Alkynes-H2.png">H<small>2</small></li>
+                                    <li data-img="orgChem/Alkynes-HX.png">H-X</li>
+                                    <li data-img="orgChem/Alkynes-X2.png">X<small>2</small></li>
+                                    <li data-img="orgChem/Alkynes-H2O.png">H<small>2</small>O</li>
+                                </ul>
+                            </li>
+                            <li>Alcohol
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/Alcohol-Cro3, MnO4, TO Carbonyls.png">
+                                        CrO<small>3</small>, MnO<small>4</small>
+                                    </li>
+                                    <li data-img="orgChem/Alcohol-NaH & R-X TO Ether.png">NaH/R-X</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Products
+                        <ul class="dropdown">
+                            <li>Alkane</li>
+                            <li>Alkene</li>
+                            <li>Alkyne
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/R-X2 & NaNH2 TO Alkyne.png">R-X<small>2</small></li>
+                                    <li data-img="orgChem/Alkyne-Halide TO Alkyne.png">-C≡C-/R-X</li>
+                                </ul>
+                            </li>
+                            <li>Alcohol
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/R-MgX TO Alcohol.png">R-MgX</li>
+                                    <li data-img="orgChem/Carbonyls TO Alcohol.png">Carbonyls</li>
+                                </ul>
+                            </li>
+                            <li>Ether
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/Alcohol-NaH & R-X TO Ether.png">R-OH/R-X</li>
+                                </ul>
+                            </li>
+                            <li>Carbonyls
+                                <ul class="dropdown">
+                                    <li data-img="orgChem/Alcohol-Cro3, MnO4, TO Carbonyls.png">R-OH</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- MATH -->
+            <li>Math
+                <ul class="dropdown">
+                    <li class="pdf-resource" data-pdf="math/graphs and transformations.pdf">Main Graphs</li>
+                    <li class="pdf-resource" data-pdf="math/unit circle.pdf">Unit Circle</li>
+                    <li class="pdf-resource" data-pdf="math/identities, derivatives, integrals.pdf">
+                        Identities | Derivatives | Integrals
+                    </li>
+                    <li class="pdf-resource" data-pdf="math/integrals applications.pdf">Integrals Applications</li>
+                    <li class="pdf-resource" data-pdf="math/continuous distributions.pdf">Continuous Distributions</li>
+                    <li class="pdf-resource" data-pdf="math/discrete distributions.pdf">Discrete Distributions</li>
+                    <li class="pdf-resource" data-pdf="math/seriesTests.pdf">Series Tests</li>
+                    <li>Logic Rules
+                        <ul class="dropdown">
+                            <li class="img-resource" data-img="math/logic-1.png">Modus Ponens</li>
+                            <li class="img-resource" data-img="math/logic-2.png">Modus Tollens</li>
+                            <li class="img-resource" data-img="math/logic-3.png">Hypothetical Syllogism</li>
+                            <li class="img-resource" data-img="math/logic-4.png">Disjunctive Syllogism</li>
+                            <li class="img-resource" data-img="math/logic-5.png">Constructive Dilemma</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- INORGANIC CHEMISTRY -->
+            <li>Inorganic Chemistry
+                <ul class="dropdown">
+                    <li class="img-resource" data-img="inorgChem/forces.png">Types of forces</li>
+                    <li class="img-resource" data-img="inorgChem/orbitals.png">Energy Orbitals</li>
+                    <li class="img-resource" data-img="inorgChem/geometry.png">Molecular Geometry</li>
+                    <li>Nomenclature
+                        <ul class="dropdown">
+                            <li data-img="inorgChem/nomenclature.png">Nomenclature</li>
+                            <li data-img="inorgChem/polyatomic ions.png">Polyatomic ions</li>
+                            <li data-img="inorgChem/cations.png">Cations</li>
+                        </ul>
+                    </li>
+                    <li class="img-resource" data-img="inorgChem/hybridization.png">Hybrid Orbitals</li>
+                    <li class="img-resource" data-img="inorgChem/trends.png">Trends</li>
+                    <li class="img-resource" data-img="inorgChem/ex titration.png">Titration (WA-SB)</li>
+                    <li class="img-resource" data-img="inorgChem/ex constant.png">Constant of equilibrium</li>
+                </ul>
+            </li>
+
+            <!-- PHYSICS -->
+            <li>Physics</li>
+            <li class="clearer">CLEAR VIEWER</li>
         </ul>
     </nav>
+
+
+    <div class="container" id="container">
+        <div id="viewer"></div>
+        <div id="logic_btn-bar"></div>
+    </div>
+
     </div>
 
 </body>
