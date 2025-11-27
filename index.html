@@ -24,76 +24,21 @@
                     <li>Reactants
                         <ul class="dropdown">
                             <li>Alkane</li>
-                            <li>Alkene
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alkenes-H2.png">H<small>2</small></li>
-                                    <li data-img="orgChem/Alkenes-HX.png">H-X</li>
-                                    <li data-img="orgChem/Alkenes-X2.png">X<small>2</small></li>
-                                    <li data-img="orgChem/Alkenes-X2-H2O.png">X<small>2</small>/H<small>2</small>O</li>
-                                    <li data-img="orgChem/Alkenes-H2O.png">H<small>2</small>O</li>
-                                </ul>
-                            </li>
-                            <li>Alkyne
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alkynes-H2.png">H<small>2</small></li>
-                                    <li data-img="orgChem/Alkynes-HX.png">H-X</li>
-                                    <li data-img="orgChem/Alkynes-X2.png">X<small>2</small></li>
-                                    <li data-img="orgChem/Alkynes-H2O.png">H<small>2</small>O</li>
-                                </ul>
-                            </li>
-                            <li>Alcohol
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alcohol-Cro3, MnO4, TO Carbonyls.png">CrO<small>3</small>,
-                                        MnO<small>4</small></li>
-                                    <li data-img="orgChem/Alcohol-NaH & R-X TO Ether.png">NaH/R-X</li>
-                                    <li data-img="orgChem/Alcohol-PCl3 TO R-X.png">PCl<small>3</small></li>
-                                    <li data-img="orgChem/Alcohol-H2SO4 To alkene.png">
-                                        H<small>2</small>SO<small>4</small></li>
-                                </ul>
-                            </li>
-                            <li>Carboxilic
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/carboxylic - reactions.png">Reactions</li>
-                                </ul>
-                            </li>
+                            <li data-reactant="alkenes">Alkene</li>
+                            <li data-reactant="alkynes">Alkyne</li>
+                            <li data-reactant="alcohols">Alcohol</li>
+                            <li>Carboxilic</li>
                         </ul>
                     </li>
 
                     <li>Products
                         <ul class="dropdown">
-                            <li>Alkane
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alcohol-H2SO4 To alkene.png">
-                                        R-OH/H<small>2</small>SO<small>4</small></li>
-                                </ul>
-                            </li>
-                            <li>Alkene
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alcohol-PCl3 TO R-X.png">R-OH/PCl<small>3</small></li>
-                                </ul>
-                            </li>
-                            <li>Alkyne
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/R-X2 & NaNH2 TO Alkyne.png">R-X<small>2</small></li>
-                                    <li data-img="orgChem/Alkyne-Halide TO Alkyne.png">-C≡C-/R-X</li>
-                                </ul>
-                            </li>
-                            <li>Alcohol
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/R-MgX TO Alcohol.png">R-MgX</li>
-                                    <li data-img="orgChem/Carbonyls TO Alcohol.png">Carbonyls</li>
-                                </ul>
-                            </li>
-                            <li>Ether
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alcohol-NaH & R-X TO Ether.png">R-OH/R-X</li>
-                                </ul>
-                            </li>
-                            <li>Carbonyls
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/Alcohol-Cro3, MnO4, TO Carbonyls.png">R-OH</li>
-                                </ul>
-                            </li>
+                            <li>Alkane</li>
+                            <li>Alkene</li>
+                            <li>Alkyne</li>
+                            <li>Alcohol</li>
+                            <li>Ether</li>
+                            <li>Carbonyls</li>
                         </ul>
                     </li>
 
@@ -195,11 +140,56 @@
         </ul>
     </nav>
 
-
-    <div class="container" id="container">
+    <div class="container" id="container">  
         <div id="viewer"></div>
         <div id="logic_btn-bar"></div>
+        <div id="reactant-viewer"></div> <!-- NEW -->
     </div>
+
+    <div class="reactants" id="alcohols">
+        <h1>Alcohol Reactions</h1>
+        <p>Alcohol TO alkene</p>
+        <img src="orgChem/reactions/alcohol TO alkene.png" alt="Alcohol Reactions" />
+        <p>Alcohol TO ether</p>
+        <img src="orgChem/reactions/alcohol TO ether.png" alt="Alcohol Reactions" />
+        <p>Alcohol TO carbonyl</p>
+        <img src="orgChem/reactions/alcohol TO carbonyl.png" alt="Alcohol Reactions" />
+        <p>Alcohol TO R-X</p>
+        <img src="orgChem/reactions/alcohol TO R-X.png" alt="Alcohol Reactions" />
+    </div>
+
+    <div class="reactants" id="alkenes">
+        <h1>Alkene Reactions</h1>
+        <p>Alkene TO alkane</p>
+        <img src="orgChem/reactions/alkene TO alkane.png" alt="Alkene Reactions" />
+        <p>Alkene TO alcohol</p>
+        <img src="orgChem/reactions/alkene TO alcohol.png" alt="Alkene Reactions" />
+        <p>Alkene TO alkyl di-halide</p>
+        <img src="orgChem/reactions/alkene TO alkyl diHalide.png" alt="Alkene Reactions" />
+        <p>Alkene TO alkyl halide</p>
+        <img src="orgChem/reactions/alkene TO alkyl halide.png" alt="Alkene Reactions" />
+        <p>Alkenes TO alcohol halide</p>
+        <img src="orgChem/reactions/alkene TO alcohol halide.png" alt="Alkene Reactions" />
+    </div>
+
+    <div class="reactants" id="alkynes">
+        <h1>Alkyne Reactions</h1>
+        <p>Alkyne TO alkene and alkane</p>
+        <img src="orgChem/reactions/alkyne TO alkene and alkane.png" alt="Alkyne Reactions" />
+        <p>Alkyne TO carbonyl</p>
+        <img src="orgChem/reactions/alkyne TO carbonyl.png" alt="Alkyne Reactions" />
+        <p>Alkyne TO halides</p>
+        <img src="orgChem/reactions/alkyne TO halide and diHalide.png" alt="Alkyne Reactions" />
+        <img src="orgChem/reactions/alkyne TO tetraHalide.png" alt="Alkyne Reactions" />
+        <p>Alkyne-halide TO alkyne</p>
+        <img src="orgChem/reactions/alkyne-halide TO alkyne.png" alt="Alkeyne Reactions" />
+    </div>
+
+
+
+<div id="img-modal">
+    <img id="modal-img" src="">
+</div>
 
 </body>
 
