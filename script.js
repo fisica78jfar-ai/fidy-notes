@@ -1,67 +1,67 @@
-// SHOW IMAGE RESOURCES
+const viewer = document.getElementById("viewer");
+
+/*****************************
+ * SHOW IMAGE RESOURCES
+ *****************************/
 document.querySelectorAll("li[data-img]").forEach(item => {
     item.addEventListener("click", (event) => {
-        event.stopPropagation();  // <-- IMPORTANT
+        event.stopPropagation();
         const imgPath = item.dataset.img;
 
-        document.getElementById("viewer").innerHTML =
+        viewer.innerHTML =
             `<img src="${imgPath}" style="max-width:100%; height:auto;">`;
-
-        document.getElementById("reactant-viewer").innerHTML = "";
     });
 });
 
-// SHOW PDF RESOURCES
+
+/*****************************
+ * SHOW PDF RESOURCES
+ *****************************/
 document.querySelectorAll("li[data-pdf]").forEach(item => {
     item.addEventListener("click", (event) => {
-        event.stopPropagation();  // <-- IMPORTANT
+        event.stopPropagation();
         const pdfPath = item.dataset.pdf;
 
-        document.getElementById("viewer").innerHTML =
+        viewer.innerHTML =
             `<iframe src="${pdfPath}" width="100%" height="800px"></iframe>`;
-
-        document.getElementById("reactant-viewer").innerHTML = "";
     });
 });
 
 
-// SHOW REACTANT DIVS
+/*****************************
+ * SHOW REACTANT TEMPLATES
+ *****************************/
 document.querySelectorAll("li[data-reactant]").forEach(item => {
     item.addEventListener("click", (event) => {
-        event.stopPropagation();  // <-- IMPORTANT
-        const id = item.dataset.reactant;
-        const content = document.getElementById(id).innerHTML;
+        event.stopPropagation();
 
-        document.getElementById("reactant-viewer").innerHTML =
-            `<div class="reactants" style="display:block;">${content}</div>`;
-
-        document.getElementById("viewer").innerHTML = "";
+        const tpl = document.getElementById(item.dataset.reactant);
+        viewer.innerHTML = tpl.innerHTML;
     });
 });
 
 
-// CLEAR VIEWER BUTTON
+/*****************************
+ * CLEAR VIEWER
+ *****************************/
 document.querySelector(".clearer").addEventListener("click", () => {
-    document.getElementById("viewer").innerHTML = "";
-    document.getElementById("reactant-viewer").innerHTML = "";
+    viewer.innerHTML = "";
 });
 
 
-/**************************************************************************
- * CLICK-TO-ENLARGE IMAGES INSIDE REACTANT VIEWER
- **************************************************************************/
 
-// When any image inside reactant-viewer is clicked → show modal
-document.addEventListener("click", function (event) {
-    if (event.target.closest("#reactant-viewer img")) {
-        const src = event.target.src;
-        document.getElementById("modal-img").src = src;
-        document.getElementById("img-modal").style.display = "flex";
+/*****************************
+ * IMAGE ENLARGE ON CLICK
+ *****************************/
+viewer.addEventListener("click", (event) => {
+    if (event.target.tagName === "IMG") {
+        const src = event.target.getAttribute("src");
+        document.getElementById("overlayImg").src = src;  // original size
+        document.getElementById("imgOverlay").style.display = "flex";
     }
 });
 
-// Close modal when clicking background OR the big image
-document.getElementById("img-modal").addEventListener("click", function () {
-    document.getElementById("img-modal").style.display = "none";
+/* Close overlay when clicking on the big image */
+document.getElementById("imgOverlay").addEventListener("click", () => {
+    document.getElementById("imgOverlay").style.display = "none";
 });
-

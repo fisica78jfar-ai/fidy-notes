@@ -1,196 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FidyNotes</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>FidyNotes</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
 
-<body>
+    <div id="imgOverlay">
+        <img id="overlayImg" src="">
+    </div>
 
-    <header>Welcome to FidyNotes</header>
+    <body>
 
-    <nav id="nav" class="nav">
-        <ul class="subjects">
+        <header>Welcome to FidyNotes</header>
 
-            <!-- ORGANIC CHEMISTRY -->
-            <li>Organic Chemistry
-                <ul class="dropdown">
-                    <li class="img-resource" data-img="orgChem/Reactions Map.png">Reactions Map</li>
+        <nav id="nav" class="nav">
+            <ul class="subjects">
 
-                    <li>Reactants
-                        <ul class="dropdown">
-                            <li>Alkane</li>
-                            <li data-reactant="alkenes">Alkene</li>
-                            <li data-reactant="alkynes">Alkyne</li>
-                            <li data-reactant="alcohols">Alcohol</li>
-                            <li>Carboxilic</li>
-                        </ul>
-                    </li>
+                <!-- ORGANIC CHEMISTRY -->
+                <li>Organic Chemistry
+                    <ul class="dropdown">
+                        <li class="img-resource" data-img="orgChem/Reactions Map.png">Reactions Map</li>
 
-                    <li>Products
-                        <ul class="dropdown">
-                            <li>Alkane</li>
-                            <li>Alkene</li>
-                            <li>Alkyne</li>
-                            <li>Alcohol</li>
-                            <li>Ether</li>
-                            <li>Carbonyls</li>
-                        </ul>
-                    </li>
+                        <li>HC & Functional Groups
+                            <ul class="dropdown">
+                                <li data-reactant="alkanes">Alkanes</li>
+                                <li data-reactant="alkenes">Alkenes</li>
+                                <li data-reactant="alkynes">Alkynes</li>
+                                <li data-reactant="alcohols">Alcohols</li>
+                                <li data-reactant="ethers">Ethers</li>
+                                <li data-reactant="carbonyls">Carbonyls</li>
+                                <li data-reactant="esthers">Esthers</li>
+                            </ul>
+                        </li>
 
-                    <li>E1,2 and SN1,2
-                        <ul class="dropdown">
-                            <li data-img="orgChem/E1, 2.png">E1, 2</li>
-                            <li data-img="orgChem/SN1,2.png">SN1,2</li>
-                            <li data-img="orgChem/SN1, 2, & E1, 2.png">SN1, 2, & E1, 2</li>
-                        </ul>
-                    </li>
+                        <li>E1,2 and SN1,2
+                            <ul class="dropdown">
+                                <li data-img="orgChem/E1, 2.png">E1, 2</li>
+                                <li data-img="orgChem/SN1,2.png">SN1,2</li>
+                                <li data-img="orgChem/SN1, 2, & E1, 2.png">SN1, 2, & E1, 2</li>
+                            </ul>
+                        </li>
 
-                    <li>Spectro-mety and -scopy
-                        <ul class="dropdown">
-                            <li>Mass Spectrometry
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/mass spectrometry.png">Concept</li>
-                                    <li>Example (pending)</li>
-                                </ul>
-                            </li>
-                            <li>IR Spectroscopy
-                                <ul class="dropdown">
-                                    <li data-img="orgChem/ir spectroscopy.png">Concept</li>
-                                    <li data-img="orgChem/ir spectroscopy examples.png">Examples</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                        <li>Spectro-mety and -scopy
+                            <ul class="dropdown">
+                                <li>Mass Spectrometry
+                                    <ul class="dropdown">
+                                        <li data-img="orgChem/mass spectrometry.png">Concept</li>
+                                    </ul>
+                                </li>
+                                <li>IR Spectroscopy
+                                    <ul class="dropdown">
+                                        <li data-img="orgChem/ir spectroscopy.png">Concept</li>
+                                        <li data-img="orgChem/ir spectroscopy examples.png">Examples</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-                    <li> Aromatics
-                        <ul class="dropdown">
-                            <li data-img="orgChem/Aromatics general mechanism.png">General Mechanism</li>
-                            <li data-img="orgChem/Aromatics Rx Map.png">Reactions Map</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                        <li>Aromatics
+                            <ul class="dropdown">
+                                <li data-img="orgChem/Aromatics general mechanism.png">General Mechanism</li>
+                                <li data-img="orgChem/Aromatics Rx Map.png">Reactions Map</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-            <!-- MATH -->
-            <li>Math
-                <ul class="dropdown">
-                    <li class="pdf-resource" data-pdf="math/graphs and transformations.pdf">Main Graphs</li>
-                    <li class="pdf-resource" data-pdf="math/unit circle.pdf">Unit Circle</li>
-                    <li class="pdf-resource" data-pdf="math/identities, derivatives, integrals.pdf">
-                        Identities | Derivatives | Integrals
-                    </li>
-                    <li class="pdf-resource" data-pdf="math/integrals applications.pdf">Integrals Applications
-                    </li>
-                    <li class="pdf-resource" data-pdf="math/partial fractions decomposition.pdf">Partial
-                        Fractions</li>
-                    <li class="pdf-resource" data-pdf="math/continuous distributions.pdf">Continuous
-                        Distributions</li>
-                    <li class="pdf-resource" data-pdf="math/discrete distributions.pdf">Discrete Distributions
-                    </li>
-                    <li class="pdf-resource" data-pdf="math/seriesTests.pdf">Series Tests</li>
-                    <li>Logic Rules
-                        <ul class="dropdown">
-                            <li class="img-resource" data-img="math/logic-1.png">Modus Ponens</li>
-                            <li class="img-resource" data-img="math/logic-2.png">Modus Tollens</li>
-                            <li class="img-resource" data-img="math/logic-3.png">Hypothetical Syllogism</li>
-                            <li class="img-resource" data-img="math/logic-4.png">Disjunctive Syllogism</li>
-                            <li class="img-resource" data-img="math/logic-5.png">Constructive Dilemma</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                <!-- MATH -->
+                <li>Math
+                    <ul class="dropdown">
+                        <li class="pdf-resource" data-pdf="math/graphs and transformations.pdf">Main Graphs</li>
+                        <li class="pdf-resource" data-pdf="math/unit circle.pdf">Unit Circle</li>
+                        <li class="pdf-resource" data-pdf="math/identities, derivatives, integrals.pdf">
+                            Identities | Derivatives | Integrals
+                        </li>
+                        <li class="pdf-resource" data-pdf="math/integrals applications.pdf">Integrals Applications</li>
+                        <li class="pdf-resource" data-pdf="math/partial fractions decomposition.pdf">Partial Fractions</li>
+                        <li class="pdf-resource" data-pdf="math/continuous distributions.pdf">Continuous Distributions</li>
+                        <li class="pdf-resource" data-pdf="math/discrete distributions.pdf">Discrete Distributions</li>
+                        <li class="pdf-resource" data-pdf="math/seriesTests.pdf">Series Tests</li>
 
-            <!-- INORGANIC CHEMISTRY -->
-            <li>Inorganic Chemistry
-                <ul class="dropdown">
-                    <li class="img-resource" data-img="inorgChem/forces.png">Types of forces</li>
-                    <li class="img-resource" data-img="inorgChem/orbitals.png">Energy Orbitals</li>
-                    <li class="img-resource" data-img="inorgChem/geometry.png">Molecular Geometry</li>
-                    <li>Nomenclature
-                        <ul class="dropdown">
-                            <li data-img="inorgChem/nomenclature.png">Nomenclature</li>
-                            <li data-img="inorgChem/polyatomic ions.png">Polyatomic ions</li>
-                            <li data-img="inorgChem/cations.png">Cations</li>
-                        </ul>
-                    </li>
-                    <li class="img-resource" data-img="inorgChem/hybridization.png">Hybrid Orbitals</li>
-                    <li class="img-resource" data-img="inorgChem/trends.png">Trends</li>
-                    <li class="img-resource" data-img="inorgChem/ex titration.png">Titration (WA-SB)</li>
-                    <li class="img-resource" data-img="inorgChem/ex constant.png">Constant of equilibrium</li>
-                </ul>
-            </li>
+                        <li>Logic Rules
+                            <ul class="dropdown">
+                                <li class="img-resource" data-img="math/logic-1.png">Modus Ponens</li>
+                                <li class="img-resource" data-img="math/logic-2.png">Modus Tollens</li>
+                                <li class="img-resource" data-img="math/logic-3.png">Hypothetical Syllogism</li>
+                                <li class="img-resource" data-img="math/logic-4.png">Disjunctive Syllogism</li>
+                                <li class="img-resource" data-img="math/logic-5.png">Constructive Dilemma</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-            <!-- PHYSICS -->
-            <li>Physics
-                <ul class="dropdown">
-                    <li class="img-resource" data-img="physics/EM spectrum.png">EM Spectrum</li>
-                    <li class="pdf-resource" data-pdf="physics/Shear Forces & Bending Diagrams.pdf">Shear Forces
-                        & Bending Diagrams</li>
-                    <li class="pdf-resource" data-pdf="physics/Thevenin's.pdf">Thevenin's</li>
-                    <li class="img-resource" data-img="physics/ampere's law.png">Ampere's Law</li>
-                    <li class="img-resource" data-img="physics/bio-savart law.png">Bio-Savart Law</li>
-                </ul>
-            </li>
-            <li class="clearer">CLEAR VIEWER</li>
-        </ul>
-    </nav>
+                <!-- INORGANIC CHEMISTRY -->
+                <li>Inorganic Chemistry
+                    <ul class="dropdown">
+                        <li class="img-resource" data-img="inorgChem/forces.png">Types of forces</li>
+                        <li class="img-resource" data-img="inorgChem/orbitals.png">Energy Orbitals</li>
+                        <li class="img-resource" data-img="inorgChem/geometry.png">Molecular Geometry</li>
+                        <li>Nomenclature
+                            <ul class="dropdown">
+                                <li data-img="inorgChem/nomenclature.png">Nomenclature</li>
+                                <li data-img="inorgChem/polyatomic ions.png">Polyatomic ions</li>
+                                <li data-img="inorgChem/cations.png">Cations</li>
+                            </ul>
+                        </li>
+                        <li class="img-resource" data-img="inorgChem/hybridization.png">Hybrid Orbitals</li>
+                        <li class="img-resource" data-img="inorgChem/trends.png">Trends</li>
+                        <li class="img-resource" data-img="inorgChem/ex titration.png">Titration (WA-SB)</li>
+                        <li class="img-resource" data-img="inorgChem/ex constant.png">Constant of equilibrium</li>
+                    </ul>
+                </li>
 
-    <div class="container" id="container">  
+                <!-- PHYSICS -->
+                <li>Physics
+                    <ul class="dropdown">
+                        <li class="img-resource" data-img="physics/EM spectrum.png">EM Spectrum</li>
+                        <li class="pdf-resource" data-pdf="physics/Shear Forces & Bending Diagrams.pdf">Shear Forces &
+                            Bending Diagrams</li>
+                        <li class="pdf-resource" data-pdf="physics/Thevenin's.pdf">Thevenin's</li>
+                        <li class="img-resource" data-img="physics/ampere's law.png">Ampere's Law</li>
+                        <li class="img-resource" data-img="physics/bio-savart law.png">Bio-Savart Law</li>
+                    </ul>
+                </li>
+
+                <li class="clearer">CLEAR VIEWER</li>
+            </ul>
+        </nav>
+
+        <!-- SINGLE VIEWER -->
         <div id="viewer"></div>
-        <div id="logic_btn-bar"></div>
-        <div id="reactant-viewer"></div> <!-- NEW -->
-    </div>
-
-    <div class="reactants" id="alcohols">
-        <h1>Alcohol Reactions</h1>
-        <p>Alcohol TO alkene</p>
-        <img src="orgChem/reactions/alcohol TO alkene.png" alt="Alcohol Reactions" />
-        <p>Alcohol TO ether</p>
-        <img src="orgChem/reactions/alcohol TO ether.png" alt="Alcohol Reactions" />
-        <p>Alcohol TO carbonyl</p>
-        <img src="orgChem/reactions/alcohol TO carbonyl.png" alt="Alcohol Reactions" />
-        <p>Alcohol TO R-X</p>
-        <img src="orgChem/reactions/alcohol TO R-X.png" alt="Alcohol Reactions" />
-    </div>
-
-    <div class="reactants" id="alkenes">
-        <h1>Alkene Reactions</h1>
-        <p>Alkene TO alkane</p>
-        <img src="orgChem/reactions/alkene TO alkane.png" alt="Alkene Reactions" />
-        <p>Alkene TO alcohol</p>
-        <img src="orgChem/reactions/alkene TO alcohol.png" alt="Alkene Reactions" />
-        <p>Alkene TO alkyl di-halide</p>
-        <img src="orgChem/reactions/alkene TO alkyl diHalide.png" alt="Alkene Reactions" />
-        <p>Alkene TO alkyl halide</p>
-        <img src="orgChem/reactions/alkene TO alkyl halide.png" alt="Alkene Reactions" />
-        <p>Alkenes TO alcohol halide</p>
-        <img src="orgChem/reactions/alkene TO alcohol halide.png" alt="Alkene Reactions" />
-    </div>
-
-    <div class="reactants" id="alkynes">
-        <h1>Alkyne Reactions</h1>
-        <p>Alkyne TO alkene and alkane</p>
-        <img src="orgChem/reactions/alkyne TO alkene and alkane.png" alt="Alkyne Reactions" />
-        <p>Alkyne TO carbonyl</p>
-        <img src="orgChem/reactions/alkyne TO carbonyl.png" alt="Alkyne Reactions" />
-        <p>Alkyne TO halides</p>
-        <img src="orgChem/reactions/alkyne TO halide and diHalide.png" alt="Alkyne Reactions" />
-        <img src="orgChem/reactions/alkyne TO tetraHalide.png" alt="Alkyne Reactions" />
-        <p>Alkyne-halide TO alkyne</p>
-        <img src="orgChem/reactions/alkyne-halide TO alkyne.png" alt="Alkeyne Reactions" />
-    </div>
 
 
+        <!-- ALL REACTANT CONTENT AS TEMPLATES -->
 
-<div id="img-modal">
-    <img id="modal-img" src="">
-</div>
+        <template id="alcohols">
+            <div id="alcohols-p">
+                <h1>Alcohols preparation</h1>
+                <h3>Hydrolysis</h3>
+                <img src="orgChem/reactions/alcohol-p-1.png">
+                <h3>Reduction of carbonyls</h3>
+                <img src="orgChem/reactions/alcohol-p-2.png">
+                <h3>Grignard Additions</h3>
+                <img src="orgChem/reactions/alcohol-p-3.png">
+                <h3>from Organohalide</h3>
+                <img src="orgChem/reactions/alcohol-p-4.png">
+                <h3>Alkenes to Halohydrins</h3>
+                <img src="orgChem/reactions/alcohol-p-5.png">
+                <h3>Diols from reactions with alkenes</h3>
+                <img src="orgChem/reactions/alcohol-p-6.png">
+            </div>
 
-</body>
+            <div id="alcohols-r">
+                <h1>Alcohols reactions</h1>
+                <h3>Conversion of Alcohols into Alkyl Halides</h3>
+                <img src="orgChem/reactions/alcohol-r-1.png">
+                <h3>Conversion of Alcohols into Tosylates</h3>
+                <img src="orgChem/reactions/alcohol-r-2.png">
+                <h3>Using Sulfonate Esters for Stereochemical Control</h3>
+                <img src="orgChem/reactions/alcohol-r-3.png">
+                <h3>Dehydration of Alcohols to Yield Alkenes</h3>
+                <img src="orgChem/reactions/alcohol-r-4.png">
+                <h3>Conversion of Alcohols into Esters</h3>
+                <img src="orgChem/reactions/alcohol-r-5.png">
+                <h3>Oxidation of Alcohols</h3>
+                <img src="orgChem/reactions/alcohol-r-6.png">
+                <h3>Conversion of Alcohols into Ethers</h3>
+                <img src="orgChem/reactions/alcohol-r-7.png">
+                <h3>Reaction of alcohols as acids</h3>
+                <img src="orgChem/reactions/alcohol-r-8.png">
+            </div>
+        </template>
 
-</html>
+        <template id="alkenes">
+            <div id="alkenes-p">
+                <h1>Alkenes preparation</h1>
+                <h3>From alkynes</h3>
+                <img src="orgChem/reactions/alkyne-r-1.png">
+            </div>
+
+            <div id="alkenes-r">
+                <h1>Alkenes reactions</h1>
+                <h3>Alkene TO alkane</h3>
+                <img src="orgChem/reactions/alkene-r-1.png">
+                <h3>Alkene TO alcohol</h3>
+                <img src="orgChem/reactions/alcohol-p-1.png">
+                <h3>Alkene TO alkyl halides and di-halides</h3>
+                <img src="orgChem/reactions/alkene-r-2.png"><br>
+                <img src="orgChem/reactions/alkene-r-3.png">
+                <h3>Alkenes TO alcohol halide</h3>
+                <img src="orgChem/reactions/alcohol-p-5.png">
+            </div>
+        </template>
+
+        <template id="alkynes">
+            <div id="alkynes-p">
+                <h1>Alkynes preparation</h1>
+                <h3>From di-Halides</h3>
+                <img src="orgChem/reactions/alkyne-p-1.png">
+                <h3>Alkyne-Halide to form larger Alkynes</h3>
+                <img src="orgChem/reactions/alkyne-p-2.png">
+            </div>
+
+            <div id="alkynes-r">
+                <h1>Alkynes reactions</h1>
+                <h3>Alkyne TO alkene and alkane</h3>
+                <img src="orgChem/reactions/alkyne-r-1.png">
+                <h3>Alkyne TO carbonyl</h3>
+                <img src="orgChem/reactions/alkyne-r-2.png">
+                <h3>Alkyne TO halides</h3>
+                <img src="orgChem/reactions/alkyne-r-3.png"><br>
+                <img src="orgChem/reactions/alkyne-r-4.png">
+            </div>
+        </template>
+
+    </body>
+
+    </html>
