@@ -107,7 +107,11 @@ body {
 
 #alcohols-p, #alcohols-r,
 #alkenes-p, #alkenes-r,     
-#alkynes-p, #alkynes-r {
+#alkynes-p, #alkynes-r,
+#ethers-p, #ethers-r,
+#alkanes-p, #alkanes-r,
+#carbonyls-p, #carbonyls-r,
+#esters-p, #esters-r {
     flex: 1;                 /* each takes equal space */
     padding-left: 10px;
 
@@ -123,7 +127,11 @@ body {
 /* ---- TEMPLATE IMAGES SMALLER & UNIFORM ---- */
 #alcohols-p img, #alcohols-r img,
 #alkenes-p img, #alkenes-r img,
-#alkynes-p img, #alkynes-r img {
+#alkynes-p img, #alkynes-r img,
+#ethers-p img, #ethers-r img,
+#alkanes-p img, #alkanes-r img, 
+#carbonyls-p img, #carbonyls-r img,
+#esters-p img, #esters-r img {
     max-width: 80%;      /* adjust this number as you like */
     max-height: 300px;   /* set a max height for uniformity */
     height: auto;
