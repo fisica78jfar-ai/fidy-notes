@@ -125,21 +125,54 @@
         </ul>
     </nav>
 
-    <!-- REACTION TEMPLATE -->
-    <template id="rxnTemplate">
-        <img src="orgChem/Reactions Map.png" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+<!-- REACTION TEMPLATE -->
+<template id="rxnTemplate">
+    <div class="image-container">
+        <img src="orgChem/Reactions Map.png" class="reaction-map">
 
-        <div class="image-container">
-            <button class="hotspot" style="top:45%;left:18%;width:60px;height:60px;"
-                data-img="orgChem/reactions/alcohol-TO-Carboxylic.png"></button>
+        <!-- Hotspots -->
 
-            <button class="hotspot" style="top:50%;left:59%;width:150px;height:35px;"
-                data-img="orgChem/reactions/alkyne-TO-ketone.png"></button>
 
-            <button class="hotspot" style="top:50%;left:33%;width:125px;height:35px;"
-                data-img="orgChem/reactions/alkyne-TO-aldehyde.png"></button>
-        </div>
-    </template>
+
+        <button class="hotspot"
+            style="top:37.5%; left:18%; width:65px; height:58px;" data-img="orgChem/reactions/alcohol-TO-Carboxylic.png"></button>
+
+
+        <!--Alkynes TO-->
+        <button class="hotspot" 
+            style="top:42.5%; left:59.8%; width: 165px; height:28px;" data-img="orgChem/reactions/alkyne-TO-ketone.png"></button>
+
+        <button class="hotspot"
+            style="top:42.5%; left:33.5%; width:135px; height:28px;" data-img="orgChem/reactions/alkyne-TO-aldehyde.png"></button>
+
+
+        <!--Alkenes TO-->
+        <button class="hotspot" 
+            style="top:65%; left:59.5%; width: 180px; height:28px;" data-img="orgChem/reactions/alkene-TO-alcohol-2.png"></button>
+
+        <button class="hotspot"
+            style="top:65.5%; left:31%; width:150px; height:24px;" data-img="orgChem/reactions/alkene-TO-alcohol-1.png"></button>
+
+        <button class="hotspot"
+            style="top:59%; left:40%; width:100px; height:28px;" data-img="orgChem/reactions/alkene-TO-dihalide.png"></button>
+
+        <button class="hotspot"
+            style="top:75.5%; left:46%; width:90px; height:28px;" data-img="orgChem/reactions/alkene-TO-halohydrin.png"></button>
+
+        <button class="hotspot"
+            style="top:80%; left:52%; width:80px; height:44px;" data-img="orgChem/reactions/alkene-TO-alkane.png"></button>
+
+        <button class="hotspot"
+            style="top:80.5%; left:60%; width:80px; height:28px;" data-img="orgChem/reactions/alkene-TO-diol.png"></button>
+
+        <button class="hotspot"
+            style="top:81%; left:74%; width:80px; height:28px;" data-img="orgChem/reactions/alkene-TO-ether.png"></button>
+
+        
+        <button class="hotspot"
+            style="top:95%; left:90%; width:70px; height:33px;" data-img="orgChem/reactions/ether-TO-diol.png"></button>
+    </div>
+</template>
 
     <!-- SINGLE VIEWER -->
     <div id="viewer"></div>

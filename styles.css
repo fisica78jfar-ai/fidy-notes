@@ -132,19 +132,34 @@ body {
 #imgOverlay img {
     max-width: 95%;
     max-height: 95%;
+    cursor: zoom-in;
+    transition: transform 0.25s ease, transform-origin 0.1s ease;
+}
+
+#imgOverlay img.zoomed {
+    transform: scale(1.8); /* adjust zoom level */
     cursor: zoom-out;
-    border: 4px solid white;
-    border-radius: 10px;
 }
 
 /* ========================================================
    HOTSPOTS
 ======================================================== */
+.image-container {
+    position: relative;
+    width: 100%;   /* force full browser width */
+    margin: 0 auto;
+}
+
+.reaction-map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .hotspot {
     position: absolute;
     background: rgba(255, 255, 255, 0);
     border: 2px solid rgba(247, 0, 255, 0.5);
-    /* remove later if desired */
     border-radius: 8px;
     cursor: pointer;
 }

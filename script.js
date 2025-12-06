@@ -37,6 +37,34 @@ document.getElementById("imgOverlay").addEventListener("click", () => {
     document.getElementById("imgOverlay").style.display = "none";
 });
 
+/* CLICK-TO-ZOOM INSIDE OVERLAY*/
+const overlayImg = document.getElementById("overlayImg");
+let zoomed = false;
+
+overlayImg.addEventListener("click", function (e) {
+    e.stopPropagation(); // prevent closing
+
+    const rect = this.getBoundingClientRect();
+    
+    // Calculate click position inside image (0–100 %)
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    // Move the zoom center to the click
+    this.style.transformOrigin = `${x}% ${y}%`;
+
+    if (!zoomed) {
+        this.style.transform = "scale(2.2)";
+        this.style.cursor = "zoom-out";
+        zoomed = true;
+    } else {
+        this.style.transform = "scale(1)";
+        this.style.cursor = "zoom-in";
+        zoomed = false;
+    }
+});
+
+
 /*****************************
  * REACTIONS POPUP (RXN)
  *****************************/
