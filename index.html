@@ -26,8 +26,8 @@
                 <ul class="dropdown">
                     <li>Reactions
                         <ul class="dropdown">
-                            <li onclick="showRXN()">H-C</li>
-                            <li>Ar</li>
+                            <li onclick="showRXN(1)">H-C</li>
+                            <li onclick="showRXN(2)">Ar</li>
                         </ul>
                     </li>
 
@@ -57,8 +57,7 @@
 
                     <li>Aromatics
                         <ul class="dropdown">
-                            <li data-img="orgChem/Aromatics general mechanism.png">General Mechanism</li>
-                            <li data-img="orgChem/Aromatics Rx Map.png">Reactions Map</li>
+                            <li data-img="orgChem/Aromatics general mechanism.png">General Mechanism</li> 
                         </ul>
                     </li>
                 </ul>
@@ -126,13 +125,11 @@
     </nav>
 
 <!-- REACTION TEMPLATE -->
-<template id="rxnTemplate">
+<template id="Template-1">
     <div class="image-container">
         <img src="orgChem/Reactions Map.png" class="reaction-map">
 
         <!-- Hotspots -->
-
-
 
         <button class="hotspot"
             style="top:37.5%; left:18%; width:65px; height:58px;" data-img="orgChem/reactions/alcohol-TO-Carboxylic.png"></button>
@@ -171,6 +168,21 @@
         
         <button class="hotspot"
             style="top:95%; left:90%; width:70px; height:33px;" data-img="orgChem/reactions/ether-TO-diol.png"></button>
+    </div>
+</template>
+
+<template id="Template-2">
+    <div class="image-container">
+        <img src="orgChem/Aromatics Rx Map.png" class="reaction-map">
+
+        <!-- Hotspots -->
+        <button class="hotspot"
+            style="top:36%; left:52.3%; width:120px; height:105px;" data-img="orgChem/reactions/benzene-halogenation.png"></button>
+        <button class="hotspot"
+            style="top:30%; left:58%; width:116px; height:30.5px;" data-img="orgChem/reactions/benzene-nitration.png"></button>
+        <button class="hotspot"
+            style="top:27%; left:67.5%; width:105px; height:30.5px;" data-img="orgChem/reactions/benzene-sulfonation.png"></button>
+        
     </div>
 </template>
 

@@ -68,8 +68,8 @@ overlayImg.addEventListener("click", function (e) {
 /*****************************
  * REACTIONS POPUP (RXN)
  *****************************/
-function showRXN() {
-    const template = document.getElementById("rxnTemplate");
+function showRXN(i) {
+    const template = document.getElementById("Template-" + i);
     viewer.innerHTML = template.innerHTML;
 
     // attach events to dynamic hotspot buttons
